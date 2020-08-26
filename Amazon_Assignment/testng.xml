@@ -1,0 +1,23 @@
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name="Amazon_Assignment" >
+
+
+	
+	<listeners>
+		<listener class-name="Base.CustomListener"/>
+		<listener class-name="reRunFailedTest.RetryListenerClass"/>
+	</listeners>
+
+	<parameter name = "browserName" value="Chrome"/>	
+	<test name="Home">	 
+		<classes>
+			<class name="TestCases.Searches"/>
+		</classes>
+	</test>
+
+	<test name="negativeLogin"> 
+		<classes>
+			<class name="TestCases.NegativeLogin" />
+		</classes>
+	</test>
+</suite>
